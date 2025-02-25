@@ -1,13 +1,15 @@
-module "ec2_sepehr_1" {
+module "ec2_instance_name_2" {
   source       = "./module/ec2"
-  key_name     = "key_pair_name" # Here is the key pair
-  machine_name = "example_1"     # Here is the instance name
+  key_name     = "key_pair_name"          # Here is the key pair
+  machine_name = "machine_${count.index+1}" # Here is the instance name
+  count        = 4                        # Instances count
 }
-module "ec2_sepehr_2" {
-  source       = "./module/ec2"
-  key_name     = "key_pair_name" # Here is the key pair
-  machine_name = "exmaple_2"     # Here is the instance name
-}
+
+# module "ec2_instance_name_1" {
+#   source       = "./module/ec2"
+#   key_name     = "key_pair_name" # Here is the key pair
+#   machine_name = "exmaple_2"     # Here is the instance name
+# }
 
 # resource "aws_instance" "machinename" {
 #   ami           = var.ami_id
