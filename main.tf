@@ -1,8 +1,8 @@
 module "ec2_instance_name_2" {
   source       = "./module/ec2"
-  key_name     = "key_pair_name"          # Here is the key pair
-  machine_name = "machine_${count.index+1}" # Here is the instance name
-  count        = 4                        # Instances count
+  key_name     = "key_pair_name"              # Here is the key pair
+  machine_name = "machine_${count.index + 1}" # Here is the instance name
+  count        = 4                            # Instances count
 }
 
 # module "ec2_instance_name_1" {
