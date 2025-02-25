@@ -7,4 +7,4 @@ export AWS_SECRET_ACCESS_KEY="secretkey"
 
 Also region can be exported via command below to avoid hard codes:
 
-aws_REGION="eu-west-2"
+AWS_REGION="eu-west-2"
